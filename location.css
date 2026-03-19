@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: 
+        linear-gradient(135deg, rgba(178, 34, 34, 0.12) 0%, rgba(139, 0, 0, 0.08) 25%, rgba(218, 196, 127, 0.09) 50%, rgba(52, 73, 94, 0.08) 75%, rgba(178, 34, 34, 0.1) 100%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(240, 240, 240, 0.2)),
+        linear-gradient(135deg, rgba(52, 73, 94, 0.05), rgba(218, 196, 127, 0.04));
+    background-attachment: fixed;
+    color: #2d2520;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+/* ===== PROFESSIONAL NAVIGATION ===== */
+.white-navbar {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgba(178, 34, 34, 0.15);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #0c2d48;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    padding: 8px 16px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #b22222;
+    text-shadow: 0 0 8px rgba(178, 34, 34, 0.2);
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #b22222;
+    font-weight: 700;
+}
+
+/* ===== ELEGANT LOCATION HEADER ===== */
+.location-header {
+    background: linear-gradient(135deg, rgba(45, 37, 32, 0.97), rgba(61, 52, 48, 0.95));
+    color: white;
+    padding: 100px 20px 60px 20px;
+    text-align: center;
+    margin-top: 70px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #dac47f;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(218, 196, 127, 0.1), transparent);
+    pointer-events: none;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #dac47f;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 1;
+}
+
+.page-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== LOCATION CONTENT LAYOUT ===== */
+.location-content {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* ===== PROFESSIONAL MAP SECTION ===== */
+.map-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 66.66%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, rgba(52, 73, 94, 0.1), rgba(218, 196, 127, 0.08));
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.map-container:hover iframe {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08), 0 0 30px rgba(178, 34, 34, 0.15);
+}
+
+/* ===== INFORMATION CARDS SECTION ===== */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+}
+
+.info-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 240, 235, 0.92));
+    border-radius: 18px;
+    padding: 40px 35px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid #b22222;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(218, 196, 127, 0.05), transparent);
+    pointer-events: none;
+}
+
+.info-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 70px rgba(178, 34, 34, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 240, 0.95));
+}
+
+.info-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #b22222;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(218, 196, 127, 0.3);
+}
+
+.address,
+.contact-info,
+.directions-info {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2d2520;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.3px;
+}
+
+.address strong,
+.contact-info strong,
+.directions-info strong {
+    color: #345d5e;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.address {
+    text-align: center;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.directions-info {
+    text-align: center;
+}
+
+/* ===== DIRECTIONS BUTTON ===== */
+.directions-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    color: white;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 10px 30px rgba(178, 34, 34, 0.3);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.directions-btn:hover {
+    background: linear-gradient(135deg, #d92323, #b22222);
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 18px 50px rgba(178, 34, 34, 0.4);
+}
+
+.directions-btn:active {
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* ===== ELEGANT FOOTER ===== */
+.elegant-footer {
+    background: linear-gradient(90deg, rgba(44, 36, 32, 0.98), rgba(60, 50, 45, 0.98), rgba(44, 36, 32, 0.98));
+    color: white;
+    padding: 18px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 -10px 45px rgba(0, 0, 0, 0.35);
+    border-top: 2px solid rgba(218, 196, 127, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+.marquee {
+    white-space: nowrap;
+    animation: scrollFooterText 32s linear infinite;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: #dac47f;
+}
+
+@keyframes scrollFooterText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .location-header {
+        padding: 80px 20px 50px 20px;
+        margin-top: 70px;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .info-card {
+        padding: 30px 25px;
+    }
+
+    .info-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .address,
+    .contact-info,
+    .directions-info {
+        font-size: 1rem;
+    }
+
+    .location-content {
+        margin: 40px auto;
+    }
+
+    .map-section {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .location-header {
+        padding: 70px 15px 40px 15px;
+    }
+
+    .info-card {
+        padding: 25px 20px;
+    }
+
+    .info-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .directions-btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .marquee {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}

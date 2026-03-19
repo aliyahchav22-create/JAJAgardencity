@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAJA Garden City Registration</title>
+    <link rel="stylesheet" href="workshop register.css">
+</head>
+<body>
+  <nav class="white-navbar">
+    <div class="nav-container">
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="our location.html" class="nav-item">Our location</a>
+        <a href="About us Garden City.html" class="nav-item">About us</a>
+        <a href="our services.html" class="nav-item">Our services</a>
+        <a href="our subjects.html" class="nav-item">Our subjects</a>
+        <a href="our team.html" class="nav-item">Our team</a>
+        <a href="Additional curriculars and upcomings.html" class="nav-item">Upcomings</a>
+        <a href="workshop register.html" class="nav-item">Register</a>
+        <a href="student register.html" class="nav-item">Student Register</a>
+    </div>
+</nav>
+
+    <main class="container">
+        <form  class="registration-form">
+            
+            <div class="left-column">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" name=" Teacher Name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email address</label>
+                    <input type="email" name="_replyto" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Social security number</label>
+                    <input type="text" name="SSN">
+                </div>
+
+                <div class="input-group">
+                    <label>Reason for Workshop</label>
+                    <div class="options-container">
+                        <label class="form-option-wrapper">
+                            <input type="checkbox" name="Reason" value="general">
+                            <span class="custom-option">methodology</span>
+                        </label>
+
+                        <label class="form-option-wrapper">
+                            <input type="checkbox" name="Reason" value="planning">
+                            <span class="custom-option">planning</span>
+                        </label>
+
+                        <label class="form-option-wrapper">
+                            <input type="checkbox" name="Reason" value="testing">
+                            <span class="custom-option">testing</span>
+                        </label>
+
+                        <div class="other-option-box">
+                            <label for="other-input">Other option:</label>
+                            <input type="text" id="other-input" name="Other Reason Detail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Elaborate</label>
+                    <textarea name="Details" rows="6"></textarea>
+                </div>
+
+                <div class="rating-section">
+                    <label>Rate us</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="Rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="Rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="Rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="Rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="Rating" value="1"><label for="star1">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h3>Preferable Appointment date:</h3>
+                <p>August 2026</p>
+                
+                <table class="calendar">
+                    <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+                    <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                    <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                    <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                    <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                    <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+                </table>
+
+                <div class="Highschool-info">
+                    <p>Garden City Highschool operates under the MOE( Ministry of Education)</p>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="submit-btn">SUBMIT REGISTRATION</button>
+                        
+                        <button type="button" class="back-btn" onclick="window.location.href='home.html';">BACK TO HOME</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer class="scrolling-footer">
+        <div class="marquee">
+            YOUR Future Matters• YOUR Future Matters • YOUR Future Matters • YOUR Future Matters
+        </div>
+    </footer>
+
+    
+</body>
+<script src="animations.js"></script>
+<script src="register.js"></script>
+</html>

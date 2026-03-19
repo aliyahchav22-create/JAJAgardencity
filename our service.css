@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap');
+
+body {
+    background: 
+        linear-gradient(120deg, rgba(52, 73, 94, 0.1) 0%, rgba(178, 34, 34, 0.08) 35%, rgba(218, 196, 127, 0.07) 65%, rgba(139, 0, 0, 0.06) 100%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(245, 245, 245, 0.15)),
+        url('garden.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+.white-navbar {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none; 
+    color: #003366;      
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    color: #693b3b; 
+}
+
+
+.main-content {
+    max-width: 1100px;
+    margin: 60px auto; 
+    padding: 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #050505; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+}
+
+
+.service-card {
+    background: linear-gradient(135deg, rgba(45, 37, 32, 0.95), rgba(61, 52, 48, 0.95));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    border-top: 4px solid #b22222;
+}
+
+.service-card:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(178, 34, 34, 0.3);
+    background: linear-gradient(135deg, rgba(45, 37, 32, 0.98), rgba(61, 52, 48, 0.98));
+}
+
+.image-box {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-bottom: 4px solid rgba(218, 196, 127, 0.3);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    background: linear-gradient(135deg, rgba(52, 73, 94, 0.1), rgba(178, 34, 34, 0.08));
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) inset;
+}
+
+.service-card:hover .image-box img {
+    transform: scale(1.12) rotate(1deg);
+    filter: brightness(1.15) saturate(1.1) contrast(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) inset, 0 0 20px rgba(218, 196, 127, 0.2);
+}
+
+
+.service-card p {
+    padding: 35px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: center;
+    margin: auto 0;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #f5ede9;
+    letter-spacing: 0.3px;
+}
+
+/* Footer */
+.scrolling-footer {
+    background-color: #1a1512; 
+    padding: 12px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    z-index: 1000;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== COOL BUTTON STYLES ===== */
+button, input[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(178, 34, 34, 0.3);
+    text-transform: uppercase;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(135deg, #d92323, #b22222);
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 30px rgba(178, 34, 34, 0.5), 0 0 30px rgba(52, 73, 94, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+button::before, input[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+    z-index: 1;
+}
+
+button:hover::before, input[type="submit"]:hover::before {
+    left: 100%;
+}
+
+/* ===== PROFESSIONAL FOOTER STYLING ===== */
+.scrolling-footer {
+    background: linear-gradient(90deg, rgba(26, 21, 18, 0.98), rgba(40, 32, 28, 0.98), rgba(26, 21, 18, 0.98));
+    color: white;
+    padding: 18px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(218, 196, 127, 0.15);
+}
+
+.marquee {
+    white-space: nowrap;
+    animation: scrollFooter 28s linear infinite;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.3px;
+    color: #dac47f;
+}
+
+@keyframes scrollFooter {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
